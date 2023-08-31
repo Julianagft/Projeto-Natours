@@ -116,6 +116,18 @@ body {
     }
 }
 
+@keyframes moveParaBaixo{
+    0% { 
+        opacity: 0;
+        transform: translateY(30px);  
+    }
+
+    100%{ 
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
 .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -168,5 +180,10 @@ body {
 .btn:hover::after{ /*Por que queremos que os efeitos que escrevemos aconteçam quando o :hover estiver ativo*/
     transform: scalex(1.4) scaley(1.6); /*increase the element*/
     opacity: 0;
+}
+
+.btn-animado{
+    animation: moveParaBaixo .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
