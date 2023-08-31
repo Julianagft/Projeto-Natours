@@ -121,20 +121,52 @@ body {
     text-decoration: none;
     padding:15px 40px;
     border-radius: 100px;
-
     display: inline-block;
+    position: relative; /*Para que o efeito do ::after de position funcione e utilize o botão como referência e não o header*/
+
+    transition: all .2s;
+    
 }
 
 .btn:hover{
     transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
 }
 
 .btn:active{ /*Quando clicamos em um elemnto é chamado de active state*/
     transform: translateY(-1px); 
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
+
+.btn::after{
+    content: "";/*Mesmo se não formos especificar nada e deixar vazio precisamos colocar o content e o display*/
+    display: inline-block;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+
+    /*Para esconder o elemento atrás do botão original*/
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1; /*Define a posição do elemnto quando está um encima do outro. Nesse caso queremos que fique atrás e por isso colocamos '-1'*/
+    transition: all .4s;
+}
+    
+     
 
 .btn-branco{
     background-color: var(--branco);
     color: var(--cinza);
-    
 }
+
+.btn-branco::after{
+    background-color: var(--branco);
+}
+
+.btn:hover::after{ /*Por que queremos que os efeitos que escrevemos aconteçam quando o :hover estiver ativo*/
+    transform: scalex(1.4) scaley(1.6); /*increase the element*/
+    opacity: 0;
+}
+
