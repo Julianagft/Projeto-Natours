@@ -60,7 +60,7 @@ body {
 }
 
 .titulo{
-   color: var(--branco); 
+   color: $--branco; 
    text-transform: uppercase; /*Todas as letras ficam maiúsculas*/
     margin-bottom: 6rem;
 
@@ -176,12 +176,12 @@ body {
      
 
 .btn--branco{
-    background-color: var(--branco);
-    color: var(--cinza);
+    background-color: $--branco;
+    color: $--cinza;
 }
 
 .btn--branco::after{
-    background-color: var(--branco);
+    background-color: $--branco;
 }
 
 .btn:hover::after{ /*Por que queremos que os efeitos que escrevemos aconteçam quando o :hover estiver ativo*/
