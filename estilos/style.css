@@ -1,197 +1,154 @@
 @charset "UTF-8";
-
-:root{
-    --verde-claro:#7ed56f;
-    --verde-medio:#55c57a;
-    --verde-escuro:#28b485;
-    --cinza: #777;
-    --branco: #fff;
-}
-
 *, *::after, *::before {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: inherit;
-}
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit; }
 
-html{
-    font-size: 62.5%;
-}
+html {
+  font-size: 62.5%; }
 
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    /*font-size: 16px;*/
-    line-height: 1.7;
-    color: var(--cinza);
-    padding: 3rem;
-
-    box-sizing: border-box; /* Muda o box model para que o borders e os paddings não sejam mais adicionados ao total width ou height que nós especificamos em uma caixa*/
-}
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: var(--cinza);
+  padding: 3rem;
+  box-sizing: border-box; }
 
 /* CABEÇALHO */
-
 .header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba(126, 213, 111, 0.8),rgb(40, 180, 131, 0.8)  ), url(../imagens/hero.jpg); /*Temos uma imagem encima da outra*/
-    background-size: cover;
-    background-position: top;
-    position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../imagens/hero.jpg);
+  /*Temos uma imagem encima da outra*/
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem; }
 
-.header__logo-box{
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
+.header__logo {
+  height: 3.5rem; }
 
-.header__logo{
-    height: 3.5rem;
-    
-}
+.header__caixa-texto {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
-.header__caixa-texto{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+.titulo {
+  color: var(--branco);
+  text-transform: uppercase;
+  /*Todas as letras ficam maiúsculas*/
+  margin-bottom: 6rem;
+  backface-visibility: hidden;
+  /*Pra concertar um bugzinho na animação*/ }
 
-.titulo{
-   color: var(--branco); 
-   text-transform: uppercase; /*Todas as letras ficam maiúsculas*/
-    margin-bottom: 6rem;
+.titulo--primario {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  /*Esses números são da fonte importada do google fonts*/
+  letter-spacing: 3.5rem;
+  /*Espaçamento entre as letras*/
+  animation-name: moveDireita;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out; }
 
-   backface-visibility: hidden; /*Pra concertar um bugzinho na animação*/
-}
-
-.titulo--primario{
-    display: block;
-    font-size: 6rem;
-    font-weight: 400; /*Esses números são da fonte importada do google fonts*/
-    letter-spacing: 3.5rem; /*Espaçamento entre as letras*/
-    
-    animation-name: moveDireita;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-.titulo--secudario{
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-
-    animation: moveEsquerda 1s ease-in-out;
-}
+.titulo--secudario {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation: moveEsquerda 1s ease-in-out; }
 
 @keyframes moveDireita {
-    0% { /* Antes que a animação comece */
-        opacity: 0;
-        transform: translateX(-10rem);  /*vai para a direç X, e como queremos que vá da direita p a esquerda colocamos um valor negativo*/   
-    }
+  0% {
+    /* Antes que a animação comece */
+    opacity: 0;
+    transform: translateX(-10rem);
+    /*vai para a direç X, e como queremos que vá da direita p a esquerda colocamos um valor negativo*/ }
+  80% {
+    /*Poderíamos colocar algo no meio caso quiséssemos que algo acontecesse quando estivesse a 80% por exemplo*/
+    transform: translate(1rem);
+    /*causa um efeitinho de bate e volta*/ }
+  100% {
+    /* Onde a animação termina */
+    opacity: 1;
+    transform: translate(0);
+    /*Por que assim vai parecer como aparece em sua forma original*/ } }
 
-    80%{/*Poderíamos colocar algo no meio caso quiséssemos que algo acontecesse quando estivesse a 80% por exemplo*/
+@keyframes moveEsquerda {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translate(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
-        transform: translate(1rem); /*causa um efeitinho de bate e volta*/
-    }
-
-    
-
-    100%{ /* Onde a animação termina */
-        opacity: 1;
-        transform: translate(0); /*Por que assim vai parecer como aparece em sua forma original*/
-    }
-}
-
-@keyframes moveEsquerda{
-    0% { 
-        opacity: 0;
-        transform: translateX(10rem);  
-    }
-
-    80%{
-        transform: translate(-1rem); 
-    }
-
-    100%{ 
-        opacity: 1;
-        transform: translate(0); 
-    }
-}
-
-@keyframes moveParaBaixo{
-    0% { 
-        opacity: 0;
-        transform: translateY(3rem);  
-    }
-
-    100%{ 
-        opacity: 1;
-        transform: translate(0); 
-    }
-}
+@keyframes moveParaBaixo {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .btn:link, .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding:1.5rem 4rem;
-    border-radius: 10rem;
-    display: inline-block;
-    position: relative; /*Para que o efeito do ::after de position funcione e utilize o botão como referência e não o header*/
-    font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  display: inline-block;
+  position: relative;
+  /*Para que o efeito do ::after de position funcione e utilize o botão como referência e não o header*/
+  font-size: 1.6rem;
+  transition: all .2s; }
 
-    transition: all .2s;
-    
-    
-}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
+.btn:active {
+  /*Quando clicamos em um elemnto é chamado de active state*/
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn:active{ /*Quando clicamos em um elemnto é chamado de active state*/
-    transform: translateY(-1px); 
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-}
+.btn::after {
+  content: "";
+  /*Mesmo se não formos especificar nada e deixar vazio precisamos colocar o content e o display*/
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  /*Para esconder o elemento atrás do botão original*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /*Define a posição do elemnto quando está um encima do outro. Nesse caso queremos que fique atrás e por isso colocamos '-1'*/
+  transition: all .4s; }
 
-.btn::after{
-    content: "";/*Mesmo se não formos especificar nada e deixar vazio precisamos colocar o content e o display*/
-    display: inline-block;
+.btn--branco {
+  background-color: var(--branco);
+  color: var(--cinza); }
 
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
+.btn--branco::after {
+  background-color: var(--branco); }
 
-    /*Para esconder o elemento atrás do botão original*/
-    position: absolute; 
-    top: 0;
-    left: 0;
-    z-index: -1; /*Define a posição do elemnto quando está um encima do outro. Nesse caso queremos que fique atrás e por isso colocamos '-1'*/
-    transition: all .4s;
-}
-    
-     
+.btn:hover::after {
+  /*Por que queremos que os efeitos que escrevemos aconteçam quando o :hover estiver ativo*/
+  opacity: 0;
+  transform: scaleX(1.4) scaleY(1.6);
+  /*increase the element*/ }
 
-.btn--branco{
-    background-color: var(--branco);
-    color: var(--cinza);
-}
-
-.btn--branco::after{
-    background-color: var(--branco);
-}
-
-.btn:hover::after{ /*Por que queremos que os efeitos que escrevemos aconteçam quando o :hover estiver ativo*/
-    opacity: 0;
-    transform: scaleX(1.4) scaleY(1.6); /*increase the element*/
-}
-
-.btn--animado{
-    animation: moveParaBaixo .5s ease-out .75s;
-    animation-fill-mode: backwards;
-}
-
+.btn--animado {
+  animation: moveParaBaixo .5s ease-out .75s;
+  animation-fill-mode: backwards; }
