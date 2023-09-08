@@ -1,193 +1,22 @@
+// A ideia desse arquivo principal é apenas guardar os imports. O código real estará em outras pastas.
+
+@import "abstracts/funcoes";
+@import "abstracts/mixins";
+@import "abstracts/variaveis";
+
+@import "base/animation";
 @import "base/base";
+@import "base/tipografia";
+@import "base/utilidades";
 
-$verde-claro:#7ed56f;
-$verde-medio:#55c57a;
-$verde-escuro:#28b485;
-$cinza: #777;
-$branco: #fff;
-$preto: #000;
+@import "componetes/botoes";
+
+@import "layouts/header";
+
+@import "paginas/home";
 
 
-*, *::after, *::before {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: inherit;
-}
 
-html{
-    font-size: 62.5%;
-}
 
-body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    /*font-size: 16px;*/
-    line-height: 1.7;
-    color: $--cinza;
-    padding: 3rem;
-
-    box-sizing: border-box;
-}
-
-/* CABEÇALHO */
-
-.header {
-    height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba($verde-claro, 0.8),rgba($verde-escuro, 0.8)  ), url(../imagens/hero.jpg); /*Temos uma imagem encima da outra*/
-    background-size: cover;
-    background-position: top;
-    position: relative;
-
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-    &header__logo-box{
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-    
-    &__logo{
-        height: 3.5rem;
-        
-    }
-    
-    &__caixa-texto{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.titulo{
-   color: $branco; 
-   text-transform: uppercase; 
-    margin-bottom: 6rem;
-
-   backface-visibility: hidden; 
-
-   &--primario{
-    display: block;
-    font-size: 6rem;
-    font-weight: 400; 
-    letter-spacing: 3.5rem;
-    
-    animation-name: moveDireita;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;}
-
-    &--secudario{
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-
-    animation: moveEsquerda 1s ease-in-out;}
-
-}
-
-@keyframes moveDireita {
-    0% { 
-        opacity: 0;
-        transform: translateX(-10rem);  
-    }
-
-    80%{
-
-        transform: translate(1rem); 
-    }
-
-    
-
-    100%{ 
-        opacity: 1;
-        transform: translate(0); 
-    }
-}
-
-@keyframes moveEsquerda{
-    0% { 
-        opacity: 0;
-        transform: translateX(10rem);  
-    }
-
-    80%{
-        transform: translate(-1rem); 
-    }
-
-    100%{ 
-        opacity: 1;
-        transform: translate(0); 
-    }
-}
-
-@keyframes moveParaBaixo{
-    0% { 
-        opacity: 0;
-        transform: translateY(3rem);  
-    }
-
-    100%{ 
-        opacity: 1;
-        transform: translate(0); 
-    }
-}
-
-.btn{
-
-    &:link, :visited {
-        text-transform: uppercase;
-        text-decoration: none;
-        padding:1.5rem 4rem;
-        border-radius: 10rem;
-        display: inline-block;
-        position: relative; 
-        font-size: 1.6rem;
-    
-        transition: all .2s; }
-
-    &:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba($preto,.2);
-        
-        &::after{ 
-            opacity: 0;
-            transform: scaleX(1.4) scaleY(1.6); 
-        }
-    }
-        
-     &:active{ 
-        transform: translateY(-1px); 
-        box-shadow: 0 .5rem 1rem rgba($preto,.2); }
-
-    &::after{
-        content: "";
-        display: inline-block;
-    
-        height: 100%;
-        width: 100%;
-        border-radius: 10rem;
-    
-        position: absolute; 
-        top: 0;
-        left: 0;
-        z-index: -1; 
-        transition: all .4s;}
-
-    &--branco{
-            background-color: $branco;
-            color: $--cinza;
-
-            &::after{
-                background-color: $branco;
-            }
-        }
-      
-    &--animado{
-            animation: moveParaBaixo .5s ease-out .75s;
-            animation-fill-mode: backwards;
-        }
-        
-}
    
 

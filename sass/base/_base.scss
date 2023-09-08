@@ -1,1 +1,13 @@
 
+*, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+//Isso define o que '1rem' é;
+html{
+    font-size: 62.5%; 
+}
+
+

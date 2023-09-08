@@ -1,0 +1,58 @@
+@import "../abstracts/variaveis";
+
+.btn{
+
+    &:link, :visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding:1.5rem 4rem;
+        border-radius: 10rem;
+        display: inline-block;
+        position: relative; 
+        font-size: 1.6rem;
+    
+        transition: all .2s; }
+
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($preto,.2);
+        
+        &::after{ 
+            opacity: 0;
+            transform: scaleX(1.4) scaleY(1.6); 
+        }
+    }
+        
+     &:active{ 
+        transform: translateY(-1px); 
+        box-shadow: 0 .5rem 1rem rgba($preto,.2); }
+
+    &::after{
+        content: "";
+        display: inline-block;
+    
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+    
+        position: absolute; 
+        top: 0;
+        left: 0;
+        z-index: -1; 
+        transition: all .4s;}
+
+    &--branco{
+            background-color: $branco;
+            color: $cinza;
+
+            &::after{
+                background-color: $branco;
+            }
+        }
+      
+    &--animado{
+            animation: moveParaBaixo .5s ease-out .75s;
+            animation-fill-mode: backwards;
+        }
+        
+}
