@@ -1,0 +1,46 @@
+
+@keyframes moveDireita {
+    0% { 
+        opacity: 0;
+        transform: translateX(-10rem);  
+    }
+
+    80%{
+
+        transform: translate(1rem); 
+    }
+
+    100%{ 
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+@keyframes moveEsquerda{
+    0% { 
+        opacity: 0;
+        transform: translateX(10rem);  
+    }
+
+    80%{
+        transform: translate(-1rem); 
+    }
+
+    100%{ 
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
+@keyframes moveParaBaixo{
+    0% { 
+        opacity: 0;
+        transform: translateY(3rem);  
+    }
+
+    100%{ 
+        opacity: 1;
+        transform: translate(0); 
+    }
+}
+
