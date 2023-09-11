@@ -47,6 +47,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
+  text-align: center;
   backface-visibility: hidden; }
   .titulo--primario {
     display: block;
