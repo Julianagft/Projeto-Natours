@@ -122,6 +122,9 @@ body {
   .header__logo {
     height: 3.5rem; }
   .header__caixa-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 40%;
     left: 50%;
