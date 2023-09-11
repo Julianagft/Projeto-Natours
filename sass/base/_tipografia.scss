@@ -2,7 +2,6 @@
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    /*font-size: 16px;*/
     line-height: 1.7;
     color: $cinza;
     padding: 3rem;
@@ -44,10 +43,7 @@ body {
     background-image: linear-gradient(to right, $verde-claro, $verde-escuro);
 
     display: inline-block;
-    -webkit-background-clip: text; //Faz com que o background corte EXATAMENTE onde o texto está.
-    color: transparent; //Sem o 'transparent' vemos o texto que fica em cima do fundo recortado;
-
-    //Esses dois comandos juntos criam esse efeito de gradiente no texto. 
+    -webkit-background-clip: text;  
 
     letter-spacing: .2rem;
     transition: all .2s;
