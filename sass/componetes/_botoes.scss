@@ -8,7 +8,7 @@
         border-radius: 10rem;
         display: inline-block;
         position: relative; 
-        font-size: 1.6rem;
+        font-size: $fonte-padrao;
     
         transition: all .2s; }
 
@@ -53,6 +53,30 @@
             animation: moveParaBaixo .5s ease-out .75s;
             animation-fill-mode: backwards;
         }
-
                 
+}
+
+.btn-text{
+    &:link, &:visited {
+        font-size: $fonte-padrao;
+        color: $verde-medio;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $verde-medio;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $verde-medio;
+        color: $branco;
+        box-shadow: 0 1rem 2rem rgba($preto, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($preto, .15);
+        transform: translateY(0px);
+
+    }
 }
