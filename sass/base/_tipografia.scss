@@ -53,4 +53,17 @@ body {
         text-shadow: .5rem 1rem 2rem rgba($preto, .2);
     }
  }
+
+ .headind-terciary{
+    font-size: $fonte-padrao;
+    font-weight: 700;
+    text-transform: uppercase;
+ }
  
+ .paragrafo{
+    font-size: $fonte-padrao;
+    
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+ }
