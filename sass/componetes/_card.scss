@@ -1,0 +1,89 @@
+.card{
+    //FUNCIONALIDADE
+
+    perspective: 150rem; /*É usado para criar efeitos 3D. Quanto menor o valor da perspectiva, mais pronunciado será o efeito 3D. */
+    -moz-perspective: 150rem; /*Pra funcionar também no mozila*/
+    position: relative;
+    height: 50rem;
+    
+
+    &__side{
+        height: 50rem;
+        transition: all .8s ease;
+                
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*Essas ultimas tres conf é para que uma fique encima da outra, e colocamos aqui pq é a classe comum as duas*/
+        
+        width: 100%;
+        backface-visibility: hidden; /*Esconde a parte de trás de um elemento */
+
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($preto, .15);
+
+
+        &--front{
+            background-color: $branco;          
+        }
+
+        &--back{
+            transform: rotateY(180deg);
+            /*Se pensarmos bem, o card back já precisa estar virada 180°, então apenas a frente precisa virar quando fizermos o hover*/
+
+            &-1{
+                background-image: linear-gradient(to right bottom, $laranja-claro, $laranja-escuro );
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom, $verde-claro, $verde-escuro );
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom, $azul-claro, $azul-escuro );
+            }
+        }
+        
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    //FRONT SIDE STYLING
+
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        
+        
+        &--1{
+            background-image: linear-gradient(to right bottom, $laranja-claro, $laranja-escuro), url('../imagens/nat-5.jpg') ;
+        }
+        &--2{
+            background-image: url('../imagens/nat-5.jpg') ;
+        }
+        &--3{
+            background-image: url('../imagens/nat-5.jpg') ;
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        text-transform: uppercase;
+        color: $branco;
+
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        
+    }
+}
