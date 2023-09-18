@@ -2,12 +2,12 @@
 
 .header {
     height: 95vh;
-    background-image: linear-gradient(to right bottom,rgba($verde-claro, 0.8),rgba($verde-escuro, 0.8)  ), url(../imagens/hero.jpg); /*Temos uma imagem encima da outra*/
+    background-image: linear-gradient(to right bottom,rgba($verde-claro, 0.8),rgba($verde-escuro, 0.8)  ), url(../imagens/hero.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
 
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //para funcionar em todos os navegadores;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &header__logo-box{

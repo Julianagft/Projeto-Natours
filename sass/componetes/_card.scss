@@ -1,8 +1,8 @@
 .card{
     //FUNCIONALIDADE
 
-    perspective: 150rem; /*É usado para criar efeitos 3D. Quanto menor o valor da perspectiva, mais pronunciado será o efeito 3D. */
-    -moz-perspective: 150rem; /*Pra funcionar também no mozila*/
+    perspective: 150rem; 
+    -moz-perspective: 150rem; 
     position: relative;
     height: 50rem;
     
@@ -10,15 +10,11 @@
     &__side{
         height: 50rem;
         transition: all .8s ease;
-                
         position: absolute;
         top: 0;
-        left: 0;
-        /*Essas ultimas tres conf é para que uma fique encima da outra, e colocamos aqui pq é a classe comum as duas*/
-        
+        left: 0;        
         width: 100%;
-        backface-visibility: hidden; /*Esconde a parte de trás de um elemento */
-
+        backface-visibility: hidden; 
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($preto, .15);
@@ -30,7 +26,6 @@
 
         &--back{
             transform: rotateY(180deg);
-            /*Se pensarmos bem, o card back já precisa estar virada 180°, então apenas a frente precisa virar quando fizermos o hover*/
 
             &-1{
                 background-image: linear-gradient(to right bottom, $laranja-claro, $laranja-escuro );
@@ -80,11 +75,10 @@
         text-align: right;
         text-transform: uppercase;
         color: $branco;
-
         position: absolute;
         top: 12rem;
         right: 2rem;
     }
 
-    
+
 }
