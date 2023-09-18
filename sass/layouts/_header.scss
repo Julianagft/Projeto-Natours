@@ -7,6 +7,7 @@
     background-position: top;
     position: relative;
 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); //para funcionar em todos os navegadores;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     &header__logo-box{
