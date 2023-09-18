@@ -48,6 +48,15 @@
                 background-color: $branco;
             }
         }
+
+    &--verde{
+            background-color: $verde-medio;
+            color: $branco;
+
+            &::after{
+                background-color: $branco;
+            }
+        }
       
     &--animado{
             animation: moveParaBaixo .5s ease-out .75s;

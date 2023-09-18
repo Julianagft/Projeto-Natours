@@ -4,11 +4,11 @@
     perspective: 150rem; /*É usado para criar efeitos 3D. Quanto menor o valor da perspectiva, mais pronunciado será o efeito 3D. */
     -moz-perspective: 150rem; /*Pra funcionar também no mozila*/
     position: relative;
-    height: 50rem;
+    height: 54rem;
     
 
     &__side{
-        height: 50rem;
+        height: 54rem;
         transition: all .8s ease;
                 
         position: absolute;
@@ -61,30 +61,104 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
         
         
         &--1{
             background-image: linear-gradient(to right bottom, $laranja-claro, $laranja-escuro), url('../imagens/nat-5.jpg') ;
         }
         &--2{
-            background-image: url('../imagens/nat-5.jpg') ;
+            background-image: linear-gradient(to right bottom, $verde-claro, $verde-escuro), url('../imagens/nat-6.jpg') ;
         }
         &--3{
-            background-image: url('../imagens/nat-5.jpg') ;
+            background-image: linear-gradient(to right bottom, $azul-claro, $azul-escuro), url('../imagens/nat-7.jpg') ;
         }
     }
 
     &__heading{
-        font-size: 2.8rem;
-        font-weight: 300;
-        text-align: right;
-        text-transform: uppercase;
-        color: $branco;
+            font-size: 2.8rem;
+            font-weight: 300;
+            text-align: right;
+            text-transform: uppercase;
+            color: $branco;
 
-        position: absolute;
-        top: 12rem;
-        right: 2rem;
+            position: absolute;
+            top: 12rem;
+            right: 2rem;
+            width: 75%;
+        }
+
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+        &--1{
+            background-image: linear-gradient(to right bottom, 
+        rgba($laranja-claro, .85), 
+        rgba($laranja-escuro, .85));
+
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+        rgba($verde-claro, .85), 
+        rgba($verde-escuro, .85));
+
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+        rgba($azul-claro, .85), 
+        rgba($azul-escuro, .85));
+
+        }
     }
 
+    &__details{
+        padding: 3rem;
+
+        ul{
+            list-style: none;
+            width:80%;
+            margin: 0 auto;
+
+
+            li{
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $cinza-claro-2;
+                }
+            }
+        }
+    }
+
+    //BACK SIDE STYLING
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    &__price-box{
+        text-align: center;
+        color: $branco;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only{
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+    }
     
 }
