@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes moveDireita {
   0% {
     opacity: 0;
@@ -71,7 +70,6 @@ body {
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
   -webkit-background-clip: text;
-  color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
   .titulo-secundario:hover {
@@ -207,9 +205,7 @@ body {
 
 .card {
   perspective: 150rem;
-  /*É usado para criar efeitos 3D. Quanto menor o valor da perspectiva, mais pronunciado será o efeito 3D. */
   -moz-perspective: 150rem;
-  /*Pra funcionar também no mozila*/
   position: relative;
   height: 50rem; }
   .card__side {
@@ -218,18 +214,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /*Essas ultimas tres conf é para que uma fique encima da outra, e colocamos aqui pq é a classe comum as duas*/
     width: 100%;
     backface-visibility: hidden;
-    /*Esconde a parte de trás de um elemento */
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
       background-color: #fff; }
     .card__side--back {
-      transform: rotateY(180deg);
-      /*Se pensarmos bem, o card back já precisa estar virada 180°, então apenas a frente precisa virar quando fizermos o hover*/ }
+      transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
@@ -291,7 +284,6 @@ body {
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../imagens/hero.jpg);
-  /*Temos uma imagem encima da outra*/
   background-size: cover;
   background-position: top;
   position: relative;
