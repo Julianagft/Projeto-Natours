@@ -67,9 +67,10 @@ body {
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 700;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
+  color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
   .titulo-secundario:hover {
@@ -309,6 +310,13 @@ body {
     font-size: 6rem;
     font-weight: 100; }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px; }
+
 .linha {
   max-width: 114rem;
   margin: 0 auto; }
@@ -376,3 +384,7 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
+
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7; }

@@ -40,11 +40,10 @@ body {
     font-size: 3.5rem;
     text-transform:uppercase;
     font-weight: 700;
-    background-image: linear-gradient(to right, $verde-claro, $verde-escuro);
-
     display: inline-block;
+    background-image: linear-gradient(to right, $verde-claro, $verde-escuro);
     -webkit-background-clip: text;  
-
+    color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
 
