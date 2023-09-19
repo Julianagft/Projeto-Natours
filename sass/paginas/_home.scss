@@ -24,6 +24,6 @@
 }
 
 .section-stories{
+    position: relative; //Sempre declarar o position primeiro para evitar bugs (estava depois do padding e tinha dado problema);
     padding: 15rem 0;
-    background-color: $cinza-claro-1;
 }

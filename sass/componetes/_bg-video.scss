@@ -1,0 +1,18 @@
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    //Queremos que ele tenha o mesmo tamanho do container (section-stories);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity:.15;
+    overflow: hidden; //A propriedade CSS overflow é usada para controlar como o conteúdo que ultrapassa as dimensões de um elemento é tratado. Quando você define overflow: hidden;, você está especificando que qualquer conteúdo que ultrapasse as dimensões do elemento deve ser ocultado, ou seja, não deve ser visível além dos limites do elemento. 
+
+    &__content{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        //O object-fit é uma propriedade CSS que controla como um elemento substituído (como uma imagem, vídeo ou objeto embutido) é dimensionado e posicionado dentro de seu contêiner. Ele é frequentemente usado para controlar o comportamento de redimensionamento de elementos substituídos, de forma que eles possam se ajustar ao tamanho do contêiner pai da maneira desejada. O object-fit é especialmente útil quando você deseja controlar o preenchimento ou o corte de elementos substituídos dentro de seu contêiner.
+    }
+}

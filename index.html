@@ -217,6 +217,13 @@
             </section>
             
             <section class="section-stories">
+                <div class="bg-video"> <!--Colocamos um container que terá o mesmo tamanho da section e nele vamos colocar o background video-->
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="imagens/video.mp4" type="video/mp4">
+                        <source src="imagens/video.webm" type="video/webm">
+                        Seu browser não suporta vídeos!
+                    </video>
+                </div>
                 <div class="u-centro-texto u-margin-bottom-big"> 
                     <h2 class="titulo-secundario">
                         Fazemos pessoas genuinamente felizes.
@@ -225,9 +232,37 @@
 
                 <div class="linha">
                     <div class="story">
-                        text
+                        <figure class="story__shape">
+                            <img src="imagens/nat-8.jpg" alt="pessoa em um tour" class="story__image">
+                            <figcaption class="story__caption">
+                                Isabela Almeida
+                            </figcaption>
+                        </figure> <!--A tag HTML <figure> é usada para marcar um elemento que representa algum tipo de conteúdo independente, como uma imagem, um gráfico, uma ilustração, um vídeo ou qualquer outra mídia relacionada ao conteúdo de uma página da web. A <figure> é frequentemente combinada com a tag <figcaption> para adicionar uma legenda ou descrição ao conteúdo.-->
+                        <div class="story__text">
+                            <h3 class="headind-terciary u-margin-bottom-small">A melhor viagem que já tive com a minha família.</h3> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur odio consequuntur quo! Distinctio odio, perspiciatis deleniti fugit recusandae pariatur rem quaerat aliquid iste delectus.</p>
+                        </div>
                     </div>
                 </div>
+
+                <div class="linha">
+                    <div class="story">
+                        <figure class="story__shape">
+                            <img src="imagens/nat-9.jpg" alt="pessoa em um tour" class="story__image">
+                            <figcaption class="story__caption">
+                                Cauan Nunes
+                            </figcaption>
+                        </figure> 
+                        <div class="story__text">
+                            <h3 class="headind-terciary u-margin-bottom-small">Nossa! Minha vida mudou completamente.</h3> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur odio consequuntur quo! Distinctio odio, perspiciatis deleniti fugit recusandae pariatur rem quaerat aliquid iste delectus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-centro-texto u-margin-top-huge"> 
+                    <a href="#" class="btn-text">Leia todas as histórias &rarr;</a>
+                </div> 
             </section>
         </main>
 
