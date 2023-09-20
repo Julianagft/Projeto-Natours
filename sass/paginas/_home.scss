@@ -27,3 +27,9 @@
     position: relative; //Sempre declarar o position primeiro para evitar bugs (estava depois do padding e tinha dado problema);
     padding: 15rem 0;
 }
+
+.section-book{
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $verde-claro, $verde-escuro);
+}
+
