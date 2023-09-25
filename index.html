@@ -48,7 +48,7 @@
                     <span class="titulo--secudario">É onde a vida acontece</span>
                 </h1>
 
-                <a href="#" class="btn btn--branco btn--animado">Conheça nossos tours</a>
+                <a href="#section-tours" class="btn btn--branco btn--animado">Conheça nossos tours</a> <!--Agora quando eu apertar o botão vai para a section-tours. a section popup vira o 'target' para o botão 'anchor'-->
             </div>
         </header>
 
@@ -130,7 +130,7 @@
                 </div>
             </section>
 
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                 <div class="u-centro-texto u-margin-bottom-big"> 
                     <h2 class="titulo-secundario">
                         Tours mais populares.
@@ -164,7 +164,7 @@
                                     <p class="card__price-value">R$ 1439,23
                                     </p>
                                 </div>
-                                <a href="popup" class="btn btn--branco">Reserve Agora!</a>
+                                <a href="#popup" class="btn btn--branco">Reserve Agora!</a>
                             </div>
                         </div>
                      </div>
@@ -195,7 +195,7 @@
                                         <p class="card__price-value">R$ 2409,11
                                         </p>
                                     </div>
-                                    <a href="popup" class="btn btn--branco">Reserve Agora!</a>
+                                    <a href="#popup" class="btn btn--branco">Reserve Agora!</a>
                                 </div>
                             </div>
                          </div>
@@ -226,7 +226,7 @@
                                         <p class="card__price-value">R$ 4348,03
                                         </p>
                                     </div>
-                                    <a href="popup" class="btn btn--branco">Reserve Agora!</a>
+                                    <a href="#popup" class="btn btn--branco">Reserve Agora!</a>
                                 </div>
                             </div>
                                 </div>
@@ -364,13 +364,14 @@
 
         <!--Podemos colocar essa sessão onde quisermos, pois não está relamente conectada com nenhuma outra. Por conta disso coloquei no final-->
 
-        <div class="popup">
+        <div class="popup" id="popup">
             <div class="popup__content">
                 <div class="popup__left">
                     <img class="popup__img" src="imagens/nat-8.jpg" alt="tour photo">
                     <img class="popup__img" src="imagens/nat-9.jpg" alt="tour photo">
                 </div>
-                <div class="popup__rigth">
+                <div class="popup__rigth"> 
+                    <a href="#section-tours" class="popup__close">&times;</a> <!--Quando apertarmos aqui ele vira o target, que ira redirecionar para a página section-tours (funcionalidade de fechar a janela)-->
                     <h2 class="titulo-secundario u-margin-bottom-small">
                         Faça sua reserva!
                     </h2>

@@ -1,4 +1,4 @@
-.popup{
+.popup {
     height: 100vh;
     width: 100%;
     position: fixed; //não move quando movemos a página.
@@ -6,7 +6,11 @@
     left: 0;
     background-color: rgba($preto, .8);
     z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
 
+    
     &__content {
         @include centro-elemento;
 
@@ -17,6 +21,9 @@
 
         display: table; //elemento pai.
         overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .4s .2s;
     }
 
     &__left {
@@ -54,5 +61,38 @@
         hyphens: auto;
         /*A propriedade CSS hyphens é usada para controlar como as quebras de palavras são gerenciadas em elementos de texto quando o espaço horizontal não é suficiente para acomodar a palavra inteira. Ela é útil para melhorar a legibilidade do texto em línguas que usam hifenização.*/
     }
+
+    //Open States
+
+    &:target { //Se aplica ao elemento target (section popup)
+    opacity: 1;
+    visibility: visible;
+    }
+
+    &:target &__content {//Queremos estilizar o conteudo no momento em que o popup vira o target.
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+
+    }
+
+    &__close {
+
+       &:link, &:visited {
+        color: $cinza;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem; 
+        font-size: 3rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .2s;
+        line-height: 1;
+       }
+
+       &:hover {
+        color: $verde-medio;
+       }
+    }
+
 
 }
