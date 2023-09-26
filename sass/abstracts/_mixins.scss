@@ -12,3 +12,38 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+//MEDIA QUERY MANAGER
+
+/*
+0 - 768px = smartphones
+768px - 992px = tablets
+992px - 1200px = desktop
+1200px + = Telas Grandes;
+
+$breakpoint argument choices
+- phone
+- tablet
+- tab-landscape
+- desktop
+*/
+
+// 1em = 16px
+
+@mixin respond ($breakpoint)  {
+    @if $breakpoint == phone {
+        @media (max-width: 48em) {@content};
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 62em) {@content};
+    }
+    @if $breakpoint == tab-landscape {
+        @media (max-width: 75em) {@content};
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 112.5em) {@content};
+    }
+}
+
+//por algum motivo rem não funciona tão bem com MediaQuery por isso no lugar usou-se o em;

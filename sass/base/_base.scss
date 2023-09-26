@@ -5,8 +5,26 @@
     box-sizing: inherit;
 }
 
-html{
-    font-size: 62.5%; 
+html {
+    font-size: 62.5%; //define o que 1rem é 10px;
+
+
+    @include respond (tab-landscape) { // width < 1200px
+        font-size: 56.25%; // 1rem = 9px = 9/16 (50%)
+    }
+
+    @include respond (tablet) { // width < 900px
+        font-size: 50%; // 1rem = 8px = 8/16 = 0.5 (50%)
+    }
+
+    @include respond (phone) { 
+        font-size: 40%; 
+    }
+
+    @include respond (desktop) {
+        font-size: 75%; //1rem = 12px = 12/16 (75%)
+    }
 }
 
+//Os menores tem que estar primeiro pq aqui foi aplicado o conceito e desktop first.
 

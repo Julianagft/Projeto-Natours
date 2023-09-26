@@ -1,4 +1,16 @@
 @charset "UTF-8";
+/*
+0 - 768px = smartphones
+768px - 992px = tablets
+992px - 1200px = desktop
+1200px + = Telas Grandes;
+
+$breakpoint argument choices
+- phone
+- tablet
+- tab-landscape
+- desktop
+*/
 @keyframes moveDireita {
   0% {
     opacity: 0;
@@ -34,6 +46,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 62em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 48em) {
+    html {
+      font-size: 40%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: 'Lato', sans-serif;
