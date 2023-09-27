@@ -16,18 +16,20 @@
 
 //MEDIA QUERY MANAGER
 
-/*
-0 - 768px = smartphones
-768px - 992px = tablets
-992px - 1200px = desktop
-1200px + = Telas Grandes;
+/*  0 - 768px = smartphones
+    768px - 992px = tablets
+    992px - 1200px = tsblet landscape
+    1200px - 1800px + = Desktop;
+    1800px + = Telas Grandes;
 
-$breakpoint argument choices
-- phone
-- tablet
-- tab-landscape
-- desktop
-*/
+
+    $breakpoint argument choices
+    - phone
+    - tablet
+    - tab-landscape
+    - desktop   */
+    
+//ORDEM: Começa com Base + Tipografia > layout  geral + grid > layout da página > componentes.
 
 // 1em = 16px
 

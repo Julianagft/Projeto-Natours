@@ -2,6 +2,10 @@
     background-color: $cinza-claro-1;
     padding: 25rem 0;
     margin-top: -20vh;
+
+    @include respond(tablet) {
+        padding: 20rem 0;
+    }
 }
 
 .section-features {
@@ -15,21 +19,37 @@
         & > *{
             transform: skewY(7deg);
        }
+
+       @include respond(tablet) {
+        padding: 11rem 0;
+    }
 }
 
 .section-tours{
     background-color: $cinza-claro-1;
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
+
+    @include respond(tablet) {
+        padding: 20rem 0 10rem 0;
+    }
 }
 
 .section-stories{
     position: relative; //Sempre declarar o position primeiro para evitar bugs (estava depois do padding e tinha dado problema);
     padding: 15rem 0;
+
+    @include respond(tablet) {
+        padding: 10rem 0;
+    }
 }
 
 .section-book{
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $verde-claro, $verde-escuro);
+
+    @include respond(tablet) {
+        padding: 10rem 0;
+    }
 }
 

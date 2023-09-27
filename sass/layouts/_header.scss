@@ -10,18 +10,24 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-    &header__logo-box{
+    @include respond(phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); 
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+     
+    }
+
+    &__logo-box {
         position: absolute;
         top: 4rem;
         left: 4rem;
     }
     
-    &__logo{
+    &__logo {
         height: 3.5rem;
         
     }
     
-    &__caixa-texto{
+    &__caixa-texto {
         display: flex;
         flex-direction: column;
         align-items: center;

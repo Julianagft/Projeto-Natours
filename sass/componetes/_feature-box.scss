@@ -6,6 +6,10 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($preto, .15);
     transition: transform .3s;
+
+    @include respond(tablet) {
+        padding: 2rem;
+    }
     
 
     &__icon {
@@ -15,6 +19,10 @@
         background-image: linear-gradient(to right, $verde-claro, $verde-escuro);
         -webkit-background-clip: text;
         color: transparent;
+
+        @include respond(tablet) {
+            margin: 0;
+        }
     }
 
     &:hover{

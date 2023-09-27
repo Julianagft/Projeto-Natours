@@ -28,3 +28,12 @@ html {
 
 //Os menores tem que estar primeiro pq aqui foi aplicado o conceito e desktop first.
 
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond (tablet) { 
+        font-size: 50%; 
+        padding: 0;
+    }
+}
