@@ -1,16 +1,5 @@
 @charset "UTF-8";
-/*  0 - 768px = smartphones
-    768px - 992px = tablets
-    992px - 1200px = tsblet landscape
-    1200px - 1800px + = Desktop;
-    1800px + = Telas Grandes;
 
-
-    $breakpoint argument choices
-    - phone
-    - tablet
-    - tab-landscape
-    - desktop   */
 @keyframes moveDireita {
   0% {
     opacity: 0;
