@@ -7,14 +7,11 @@
         background-color: $branco;
         height: 7rem;
         width: 7rem;
-        // height e width do botão é um pouco maior que o background para evitar que vaze a cor.
-
         position: fixed;
         top: 6rem;
         right: 6rem;
-        //é por causa do calculo de tamanho entre o botão e o backgroung, para que um fique encima do outro.
         border-radius: 50%;
-        z-index: 2000; //Esses números não importam realmente, contanto que o do botão seja maior que o do background;
+        z-index: 2000; 
         text-align: center;
 
         @include respond(tablet) {
@@ -47,8 +44,7 @@
         @include respond(phone) {
             top: 3.5rem;
             right: 3.5rem;
-        }
-        
+        }   
     }
 
     &__nav {
@@ -56,15 +52,8 @@
         position: fixed;
         top: 0;
         right: 0;
-        z-index:1500; //esse aqui fica no meio
-
-        // opacity: 0; //isso torna invisível, mas o link continua lá.
-        //width: 0; //para corrigir esse problema usamos width:0;
-
-        //Não preciso mais dessa parte já que as adicionei nas pseudo classes;
-
+        z-index:1500;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
     }
 
     &__list {
@@ -99,7 +88,7 @@
         }
 
         &:hover, &:active{
-            background-position: 100%; //background muda para o lado esquerdo pq o position vai para 100%;
+            background-position: 100%; 
             color: $verde-medio;
             transform: translateX(1rem);
         }
@@ -107,7 +96,7 @@
 
     //FUNCTIONALITY
 
-    &__checkbox:checked ~ &__background {// ~ esse é o simbolo geral para irmãos, não necessitando que seja o irmão adjacente.
+    &__checkbox:checked ~ &__background {
         transform: scale(80);
     }
 
@@ -124,7 +113,7 @@
 
         &, &::before, &::after {
             width: 3rem;
-            height: 2px;//usando pixels pq não queremos que esse valor mude.
+            height: 2px;
             background-color: $cinza-escuro-3;
             display: inline-block;
         }

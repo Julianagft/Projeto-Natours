@@ -9,7 +9,7 @@
     }
 
    &__logo-box{
-    text-align: center; //posso fazer isso pq uma img é um inline-elemento.
+    text-align: center; 
     margin: 8rem;
 
     @include respond(tablet) {
@@ -23,11 +23,10 @@
     height: auto;
    }
 
-   &__navigation{ //Aqui onde criamos a linha cinza.
+   &__navigation{ 
     border-top: 1px solid $cinza;
-    padding-top: 2rem;
-    //criei uma div, deixei ela invisível, exceto a borda superior, e cria esse efeito legal de linha. 
-    display: inline-block; //fiz isso por que um inline-bloco não ocupa 100% da sua largura disponível, apenas a quantidade que o conteúde necessita. Dessa forma a "linha" termina exatamente onde o ultimo elemento da div termina. 
+    padding-top: 2rem; 
+    display: inline-block; 
 
     @include respond(tablet) {
         width: 100%;

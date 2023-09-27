@@ -22,16 +22,11 @@
     1200px - 1800px + = Desktop;
     1800px + = Telas Grandes;
 
-
     $breakpoint argument choices
     - phone
     - tablet
     - tab-landscape
     - desktop   */
-    
-//ORDEM: Começa com Base + Tipografia > layout  geral + grid > layout da página > componentes.
-
-// 1em = 16px
 
 @mixin respond ($breakpoint)  {
     @if $breakpoint == phone {
@@ -47,5 +42,3 @@
         @media (min-width: 112.5em) {@content};
     }
 }
-
-//por algum motivo rem não funciona tão bem com MediaQuery por isso no lugar usou-se o em;

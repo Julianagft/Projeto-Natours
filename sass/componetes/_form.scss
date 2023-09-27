@@ -28,11 +28,11 @@
 
         &::-webkit-input-placeholder {
             color: $cinza-escuro-2;
-           // display: none !important;
+        
         }
     }
 
-    &__label{
+    &__label {
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
@@ -46,31 +46,24 @@
         visibility: hidden;
         transform: translateY(-4rem);
     }
-    //EFEITO PRO NOME CAIR EMBAIXO DO IMPUT
 
-    //O código &__input:placeholder-shown + &__label é um seletor CSS que descreve um elemento <label> que segue diretamente um elemento <input> quando o placeholder do input está sendo mostrado.
-    //:placeholder-shown: é um pseudo-classe que se aplica ao elemento de entrada quando o placeholder está sendo mostrado. Ou seja, quando o campo de entrada está vazio e o texto do placeholder é visível.
-    //+ : é um seletor de irmão adjacente que seleciona um elemento que segue diretamente o elemento anterior no HTML. No caso, ele seleciona o próximo elemento irmão que corresponde ao seletor.(esse seletor só funciona se o elemento vier imediatamente depois no html).
-    //Portanto, o seletor &__input:placeholder-shown + &__label seleciona o rótulo (elemento <label>) que segue diretamente um campo de entrada (elemento <input>) quando o placeholder do campo de entrada está sendo mostrado. 
-
-
-    &__radio-group{
+    &__radio-group {
         width: 48%;
         display: inline-block;
     }
 
-    &__radio-input{
+    &__radio-input {
         display: none;
     }
 
-    &__radio-label{
+    &__radio-label {
         font-size: $fonte-padrao;
         cursor: pointer;
         padding-left: 4.5rem;
         position: relative;
     }
 
-    &__radio-button{
+    &__radio-button {
         height: 3rem;
         width: 3rem;
         border: 5px solid $verde-medio;
@@ -80,8 +73,7 @@
         left: 1rem;
         top: -1rem;
 
-
-        &::after{
+        &::after {
             content: "";
             display: block;
             height: 1.3rem;
@@ -90,15 +82,10 @@
             @include centro-elemento;
             background-color: $verde-medio;
             opacity: 0;
-
         }
-
-
     }
 
     &__radio-input:checked ~ &__radio-label &__radio-button::after{
         opacity: 1;
     }
-
-
 }

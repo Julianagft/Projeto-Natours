@@ -36,7 +36,7 @@
 }
 
 .section-stories{
-    position: relative; //Sempre declarar o position primeiro para evitar bugs (estava depois do padding e tinha dado problema);
+    position: relative; 
     padding: 15rem 0;
 
     @include respond(tablet) {

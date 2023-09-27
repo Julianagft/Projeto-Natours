@@ -6,7 +6,7 @@ body {
     color: $cinza;
 }
 
-.titulo{
+.titulo {
     color: $branco; 
     text-transform: uppercase; 
     margin-bottom: 6rem;
@@ -14,12 +14,11 @@ body {
     backface-visibility: hidden; 
     
  
-    &--primario{
+    &--primario {
         display: block;
         font-size: 6rem;
         font-weight: 400; 
         letter-spacing: 3.5rem;
-        
         animation-name: moveDireita;
         animation-duration: 1s;
         animation-timing-function: ease-in-out;
@@ -30,9 +29,7 @@ body {
         } 
     }
 
-   
-    
-    &--secudario{
+    &--secudario {
         display: block;
         font-size: 2rem;
         font-weight: 700;
@@ -47,7 +44,7 @@ body {
     }
  }
 
- .titulo-secundario{
+ .titulo-secundario {
     font-size: 3.5rem;
     text-transform:uppercase;
     font-weight: 700;
@@ -58,7 +55,7 @@ body {
     letter-spacing: .2rem;
     transition: all .2s;
 
-    &:hover{
+    &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($preto, .2);
     }
@@ -71,16 +68,16 @@ body {
     }
  }
 
- .headind-terciary{
+ .headind-terciary {
     font-size: $fonte-padrao;
     font-weight: 700;
     text-transform: uppercase;
  }
  
- .paragrafo{
+ .paragrafo {
     font-size: $fonte-padrao;
     
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 3rem;
     }
  }

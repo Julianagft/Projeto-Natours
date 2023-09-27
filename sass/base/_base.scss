@@ -6,15 +6,15 @@
 }
 
 html {
-    font-size: 62.5%; //define o que 1rem é 10px;
+    font-size: 62.5%; 
 
 
-    @include respond (tab-landscape) { // width < 1200px
-        font-size: 56.25%; // 1rem = 9px = 9/16 (50%)
+    @include respond (tab-landscape) { 
+        font-size: 56.25%; 
     }
 
-    @include respond (tablet) { // width < 900px
-        font-size: 50%; // 1rem = 8px = 8/16 = 0.5 (50%)
+    @include respond (tablet) { 
+        font-size: 50%; 
     }
 
     @include respond (phone) { 
@@ -22,11 +22,9 @@ html {
     }
 
     @include respond (desktop) {
-        font-size: 75%; //1rem = 12px = 12/16 (75%)
+        font-size: 75%; 
     }
 }
-
-//Os menores tem que estar primeiro pq aqui foi aplicado o conceito e desktop first.
 
 body {
     box-sizing: border-box;

@@ -1,7 +1,7 @@
-.composition{
+.composition {
     position: relative;
 
-    &__photo{
+    &__photo {
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($preto, .4);
         border-radius: 2px;
@@ -33,7 +33,7 @@
 
             @include respond(tablet) {
                 top: -1rem;
-                z-index: 50; //vai ficar acima das outras;
+                z-index: 50; 
                 transform: scale(1.3);
             }
         }
@@ -49,7 +49,7 @@
             }
         }
 
-        &:hover{
+        &:hover {
             outline: 1.5rem solid $verde-medio;
             transform: scale(1.05) translateY(-3rem);
             box-shadow: 0 2.5rem 4rem rgba($preto, .5);
@@ -58,7 +58,7 @@
         
     }
 
-    &:hover &__photo:not(:hover){
+    &:hover &__photo:not(:hover) {
         transform: scale(.9);
     }
 }
