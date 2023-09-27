@@ -1,14 +1,9 @@
-//Eu poderia ter deixado em home já que isso aqui só vai ser usado nessa section em específico, mas por questões de organização achei melhor criar um novo componente.
 
 .book{
     background-image: linear-gradient(105deg, rgba($branco, .9) 0%, rgba($branco, .9) 50%, transparent 50%), url(../imagens/nat-10.jpg);
-    //TÉCNICA SOLID GRADIENT: Colocando esses dois valores com o mesmo número, criamos uma linha sólida entre as cores, criando um gradiente entre duas cores sólidas.
-    //Para substituir a cor por uma imagem é só trocar a ultima cor por 'transparent';
-
-    background-size: cover;//background-size: 100%; (significa a mesma coisa que 'cover'), mas não coloquei pq quando diminui a página da erro. 
+    background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($preto, .2);
-
     height: 50rem;
 
     &__formulario{
