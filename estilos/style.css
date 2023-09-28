@@ -769,6 +769,9 @@ body {
     padding-top: 2rem;
     width: 80%;
     float: left; }
+    @media (max-width: 62em) {
+      .footer__copyright {
+        text-align: center; } }
 
 .navigation__checkbox {
   display: none; }
