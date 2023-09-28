@@ -16,6 +16,10 @@
         display: block;
         transition: all .3s;
 
+        @include respond(tablet) {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($preto, .1);
@@ -50,6 +54,11 @@
     &__radio-group {
         width: 48%;
         display: inline-block;
+
+        @include respond(tablet) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-input {
@@ -85,7 +94,7 @@
         }
     }
 
-    &__radio-input:checked ~ &__radio-label &__radio-button::after{
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
         opacity: 1;
     }
 }

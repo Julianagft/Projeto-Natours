@@ -4,10 +4,25 @@
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($preto, .2);
-    height: 50rem;
 
     &__formulario{
         width: 50%;
         padding: 6rem;
+
+        @include respond(tab-landscape) {
+            width: 65%;
+        }
+
+        @include respond(tablet) {
+            width: 100%;
+        }
+    }
+
+    @include respond(tab-landscape) {
+        background-image: linear-gradient(105deg, rgba($branco, .9) 0%, rgba($branco, .9) 65%, transparent 65%), url(../imagens/nat-10.jpg);
+    }
+
+    @include respond(tablet) {
+        background-image: linear-gradient(to right, rgba($branco, .9) 0%, rgba($branco, .9) 100%,), url(../imagens/nat-10.jpg);
     }
 }

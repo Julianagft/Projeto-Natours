@@ -4,18 +4,9 @@
     font-size: 1.4rem;
     color: $cinza-claro-1;
 
-    @include respond(tablet) {
-        padding: 8rem 0;
-    }
-
    &__logo-box{
     text-align: center; 
     margin: 8rem;
-
-    @include respond(tablet) {
-        margin-bottom: 6rem;
-    }
-
    }
 
    &__logo{
@@ -70,11 +61,5 @@
     padding-top: 2rem;
     width: 80%;
     float: left;
-
-    @include respond(tablet) {
-        width: 100%;
-        float: none;
-    }
-
    }
 }
