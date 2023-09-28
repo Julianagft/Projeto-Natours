@@ -1,5 +1,14 @@
-@charset "UTF-8";
+/*  0 - 768px = smartphones
+    768px - 992px = tablets
+    992px - 1200px = tsblet landscape
+    1200px - 1800px + = Desktop;
+    1800px + = Telas Grandes;
 
+    $breakpoint argument choices
+    - phone
+    - tablet
+    - tab-landscape
+    - desktop   */
 @keyframes moveDireita {
   0% {
     opacity: 0;
@@ -570,8 +579,7 @@ body {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
-    hyphens: auto;
-    /*A propriedade CSS hyphens é usada para controlar como as quebras de palavras são gerenciadas em elementos de texto quando o espaço horizontal não é suficiente para acomodar a palavra inteira. Ela é útil para melhorar a legibilidade do texto em línguas que usam hifenização.*/ }
+    hyphens: auto; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
