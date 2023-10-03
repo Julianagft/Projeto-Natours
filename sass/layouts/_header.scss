@@ -10,6 +10,14 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+        
+        //Concertar o bug do clip-path no safari.
+    }
+
     @media (min-resolution:192dpi) and (min-width: 48em), (min-width:125em) { //192 pontos por    polegada (resolução da Apple retina screen);
         //A virgula(,) equivale ao OR (ou);
         //Ele criou uma condição para que o código se adapte tanto a resolução como ao tamanho da tela;
