@@ -37,3 +37,8 @@ body {
         padding: 0;
     }
 }
+
+::selection {
+    background-color: $verde-medio;
+    color: $branco;
+}

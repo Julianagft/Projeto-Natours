@@ -158,7 +158,10 @@
     // --------- MEDIA QUERY ---------
 
 
-    @include respond (tablet) {
+    //@include respond (tablet) {
+    @media only screen and (max-width: 62em), 
+           only screen and (hover:none)  {
+    //Basicamente estou disendo que o usuario só verá o card dessa forma quando a tela for menor que 62em e quando o devise não puder utilizar o hover.
         height: auto;
         border-radius: 3px;
         background-color: $branco;

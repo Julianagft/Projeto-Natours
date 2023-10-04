@@ -18,7 +18,7 @@
         //Concertar o bug do clip-path no safari.
     }
 
-    @media (min-resolution:192dpi) and (min-width: 48em), (min-width:125em) { //192 pontos por    polegada (resolução da Apple retina screen);
+    @media only screen and (min-resolution:192dpi) and (min-width: 48em), only screen and (min-width:125em) { //192 pontos por    polegada (resolução da Apple retina screen);
         //A virgula(,) equivale ao OR (ou);
         //Ele criou uma condição para que o código se adapte tanto a resolução como ao tamanho da tela;
         

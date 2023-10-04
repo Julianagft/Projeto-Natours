@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss estilos/style.css -w"
+    "compile:sass": "node-sass sass/main.scss estilos/style.css -w"
   },
   "repository": {
     "type": "git",

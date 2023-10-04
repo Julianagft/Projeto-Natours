@@ -35,16 +35,16 @@
 
 @mixin respond ($breakpoint)  {
     @if $breakpoint == phone {
-        @media (max-width: 48em) {@content};
+        @media only screen and (max-width: 48em) {@content};
     }
     @if $breakpoint == tablet {
-        @media (max-width: 62em) {@content};
+        @media only screen and (max-width: 62em) {@content};
     }
     @if $breakpoint == tab-landscape {
-        @media (max-width: 75em) {@content};
+        @media only screen and (max-width: 75em) {@content};
     }
     @if $breakpoint == desktop {
-        @media (min-width: 112.5em) {@content};
+        @media only screen and (min-width: 112.5em) {@content};
     }
 }
 
