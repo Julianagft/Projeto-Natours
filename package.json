@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass"  : "node-sass sass/main.scss estilos/style.css -w"
+    "compile:sass": "node-sass sass/main.scss estilos/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Julianagft/Projeto-Natours#readme",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "autoprefixer": "^10.4.16",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^10.1.0"
   }
 }
